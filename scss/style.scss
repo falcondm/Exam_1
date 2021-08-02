@@ -7,12 +7,15 @@
     padding: 0;
     box-sizing: border-box;
 }
+html, body {
+    overflow-x: hidden;
+}
 body {
     padding: 15px;
     color: #fff;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 400;
-    overflow-x: hidden;
+    // overflow-x: hidden;
 }
 a {
     text-decoration: none;
@@ -560,8 +563,7 @@ a {
 }
 @media screen and (max-width: 768px) {
     .panel__nav {
-        z-index: 2;
-        position:fixed;
+        position: absolute;
         right: 0;
         bottom: 0;
         height: auto;
