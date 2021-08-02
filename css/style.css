@@ -12,6 +12,7 @@ body {
   color: #fff;
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 400;
+  overflow-x: hidden;
 }
 
 a {
@@ -43,6 +44,25 @@ a {
 @media screen and (max-width: 1200px) {
   .header {
     height: calc(100vh - 15px);
+  }
+}
+
+.header input.hamburger {
+  display: none;
+}
+
+.header label.hamburger {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .header label.hamburger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    top: 7px;
+    right: 25px;
   }
 }
 
@@ -888,7 +908,8 @@ a {
 
 @media screen and (max-width: 768px) {
   .panel__nav {
-    position: absolute;
+    z-index: 2;
+    position: fixed;
     right: 0;
     bottom: 0;
     height: auto;
@@ -916,7 +937,6 @@ a {
             flex-direction: column;
     margin: 0;
     padding: 0;
-    overflow: auto;
     overflow-x: hidden;
     pointer-events: auto;
     -webkit-box-pack: end;
@@ -1362,11 +1382,6 @@ a {
   label.hamburger > i:after {
     -webkit-transform: translate(-50%, 14px);
             transform: translate(-50%, 14px);
-  }
-  label.hamburger {
-    position: absolute;
-    top: 7px;
-    right: 25px;
   }
 }
 /*# sourceMappingURL=style.css.map */
