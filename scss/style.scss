@@ -64,6 +64,7 @@ a {
             font-weight: 100;
             letter-spacing: 6px;
             padding-top: 5px;
+            text-align: center;
         }
         .content__form {
             display: flex;
@@ -72,13 +73,17 @@ a {
             @media screen and (max-width: 768px) {
                 padding: 0 20px;
             }
+            @media screen and (max-width: 576px) {
+                flex-direction: column;
+                align-items: center;
+            }
             .h-form__text-field {
                 border: none;
-                width: 500px;
+                max-width: 500px;
+                width: 100%;
                 height: 60px;
                 color: #999;
                 font-size: 20px;
-                padding-left: 20px;
                 text-align: center;
                 &:focus {
                     outline: none;
@@ -90,6 +95,9 @@ a {
                     letter-spacing: 3px;
                     font-family: 'Josefin Sans', sans-serif;
                     font-weight: 400;
+                    @media screen and (max-width: 576px) {
+                        letter-spacing: 1px;
+                    }
                 }
             }
             .h-form__button {
@@ -122,13 +130,15 @@ a {
             display: flex;
             flex-direction: column;
             align-items: center;
-            position: absolute;
-            top: 320px;
-            left: 42.62%;
+            position: relative;
+            top: 120px;
             opacity: .8;
             letter-spacing: 2px;
+            @media screen and (max-width: 576px) {
+                top: 80px;
+            }
             &:hover {
-                top: 315px;
+                top: 110px;
             }
             .arrow-icon {
                 width: 30px;
@@ -199,7 +209,8 @@ a {
 }
 .main {
     .button {
-        width: 225px;
+        max-width: 225px;
+        width: 100%;
         height: 60px;
         background-color: rgba(84, 116, 253, .7);
         border: none;
@@ -223,6 +234,12 @@ a {
         @media screen and (max-width: 1200px) {
             padding: 0 20px;
         }
+        @media screen and (max-width: 576px) {
+            flex-direction: column-reverse;
+            justify-content: space-evenly;
+            height: fit-content;
+            padding: 20px;
+        }
         &__container {
             display: flex;
             flex-direction: column;
@@ -232,6 +249,11 @@ a {
             min-height: 350px;
             position: relative;
             top: 30px;
+            @media screen and (max-width: 576px) {
+                min-height: fit-content;
+                padding: 20px 0;
+                top: 0;
+            }
             .container__title {
                 font-size: calc(25px + (36 - 25) * ((100vw - 320px) / (1800 - 320)));
                 font-family: 'Aleo', serif;
@@ -240,6 +262,9 @@ a {
             .container__text {
                 &:first-of-type {
                     padding-top: 60px;
+                    @media screen and (max-width: 576px) {
+                        padding-top: 20px;
+                    }
                 }
                 &:last-of-type {
                     padding-top: 20px;
@@ -261,14 +286,21 @@ a {
             width: 100%;
             height: 450px;
             @media screen and (max-width: 1200px) {
-                height: 390px;
+                height: 375px;
             }
             @media screen and (max-width: 768px) {
-                height: 330px;
+                // height: 330px;
+                display: flex;
+                align-items: center;
                 top: 20px;
+                height: fit-content;
             }
             @media screen and (max-width: 992px) {
                 padding-left: 20px;
+            }
+            @media screen and (max-width: 576px) {
+                padding-left: 0;
+                top: 0;
             }
             .imgs__river,
             .imgs__mount {
@@ -287,6 +319,10 @@ a {
                 position: absolute;
                 right: 0;
                 bottom: 0;
+                @media screen and (max-width: 768px) {
+                    position: static;
+                    margin-top: 10px;
+                }
             }
         }
     }
@@ -296,6 +332,7 @@ a {
         height: 340px;
         background-color: #333333;
         padding: 0 calc(50vw - 555px);
+        text-align: center;
         &__container {
             display: flex;
             justify-content: space-between;
@@ -339,6 +376,10 @@ a {
         background: url('../img/desktop/house-pool.png') no-repeat;
         background-size: cover;
         height: 700px;
+        @media screen and (max-width: 576px) {
+            height: fit-content;
+            padding: 20px 0;
+        }
         padding: 0 calc(50vw - 555px);
         .container {
             width: 100%;
@@ -356,7 +397,8 @@ a {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
-                width: 540px;
+                max-width: 540px;
+                width: 100%;
                 height: 370px;
                 position: absolute;
                 padding: 50px 30px;
@@ -366,15 +408,23 @@ a {
                 font-size: 20px;
                 @media screen and (max-width: 768px) {
                     position: static;
+                    height: fit-content;
+                    padding: 30px 20px;
                 }
                 .title {
                     font-size: 20px;
                     font-weight: 300;
+                    @media screen and (max-width: 576px) {
+                        margin: 20px 0;
+                    }
                 }
                 .text {
                     font-size: 16px;
                     padding-bottom: 10px;
                     line-height: 1.5;
+                    @media screen and (max-width: 576px) {
+                        padding-bottom: 20px;
+                    }
                 }
                 @media screen and (min-width: 1200.1px) {
                     &:hover {
@@ -407,6 +457,9 @@ a {
         background-size: cover;
         height: 730px;
         padding: 0 calc(50vw - 570px);
+        @media screen and (max-width: 576px) {
+            height: fit-content;
+        }
         .container {
             display: flex;
             flex-direction: column;
@@ -415,6 +468,9 @@ a {
             height: 100%;
             @media screen and (max-width: 1200px) {
                 padding: 0 20px;
+            }
+            @media screen and (max-width: 576px) {
+                padding-bottom: 20px;
             }
             .container__title {
                 font-size: calc(25px + (36 - 25) * ((100vw - 320px) / (1800 - 320)));
@@ -425,6 +481,7 @@ a {
                 bottom: 100px;
                 @media screen and (max-width: 768px) {
                     position: static;
+                    margin-top: 50px;
                     margin-bottom: 50px;
                 } 
             }
@@ -449,12 +506,20 @@ a {
                 @media screen and (max-width: 768px) {
                     flex-direction: column;
                     height: fit-content;
+                    align-items: center;
                 }
                 .f-box__img {
                     height: 285px;
                     @media screen and (max-width: 768px) {
                         display: flex;
                         justify-content: center;
+                        max-width: 550px;
+                        width: 100%;
+                    }
+                    picture {
+                        @media screen and (max-width: 768px) {
+                            width: 100%;
+                        }
                     }
                     img {
                         object-fit: cover;
@@ -464,7 +529,7 @@ a {
                             width: 382px;
                         }
                         @media screen and (max-width: 768px) {
-                            width: 550px;
+                            width: 100%;
                         }
                     }
                 }
@@ -489,9 +554,10 @@ a {
                 }
                 @media screen and (max-width: 768px) {
                     margin: 0 auto;
-                    height: 230px;
+                    height: fit-content;
                     padding: 25px;
                 }
+                
                 .f-box__title {
                     font-size: 20px;
                     text-transform: uppercase;
