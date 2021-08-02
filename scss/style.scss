@@ -551,7 +551,7 @@ a {
         right: 0;
         bottom: 0;
         height: auto;
-        @include width-height(100vw,100vh);
+        @include width-height(100vw,calc(100vh - 15px));
         transform: translate(100vw, 0);
         -ms-transform: translatex(-100vw);
         box-sizing: border-box;

@@ -893,7 +893,7 @@ a {
     bottom: 0;
     height: auto;
     width: 100vw;
-    height: 100vh;
+    height: calc(100vh - 15px);
     -webkit-transform: translate(100vw, 0);
             transform: translate(100vw, 0);
     -ms-transform: translatex(-100vw);
