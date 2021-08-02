@@ -33,23 +33,33 @@
                 </svg>
             </a>
         </div>
-        <nav class="header__nav nav">
-            <p class="nav__logo">BHROMAON</p>
-            <ul class="nav__menu menu">
-                <li class="menu__item">
-                    <a href="" class="menu__link">who we are</a>
-                </li>
-                <li class="menu__item">
-                    <a href="" class="menu__link">what we do</a>
-                </li>
-                <li class="menu__item">
-                    <a href="" class="menu__link">travel with us</a>
-                </li>
-                <li class="menu__item">
-                    <a href="" class="menu__link">contact us</a>
-                </li>
-            </ul>
-        </nav>
+        <div class="header__panel panel">
+            <p class="panel__logo">BHROMAON</p>
+            <input id="hamburger" class="hamburger" type="checkbox"/>
+            <label class="hamburger" for="hamburger">
+                <i></i>
+                <text>
+                    <close>close</close>
+                    <open>menu</open>
+                </text>
+            </label>
+            <nav class="panel__nav nav">
+                <ul class="nav__menu menu">
+                    <li class="menu__item">
+                        <a href="" class="menu__link">who we are</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="" class="menu__link">what we do</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="" class="menu__link">travel with us</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="" class="menu__link">contact us</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main class="main">
         <section class="choose-us">
@@ -61,10 +71,18 @@
             </div>
             <div class="choose-us__imgs imgs">
                 <div class="imgs__river">
-                    <img class="choose-us__image" src="./img/river-house.png" alt="">
+                    <picture class="choose-us__image">
+                        <source class="choose-us__image" srcset="./img/mobile/river-house.png" media="(max-width: 768px)">
+                        <source class="choose-us__image" srcset="./img/tablet/river-house.png" media="(max-width: 1200px)">
+                        <img class="choose-us__image" src="./img/desktop/river-house.png" alt="">
+                    </picture>
                 </div>
                 <div class="imgs__mount">
-                    <img class="choose-us__image" src="./img/mount-small.png" alt="">
+                    <picture class="choose-us__image">
+                        <source class="choose-us__image" srcset="./img/mobile/mount-small_mobile.png" media="(max-width: 768px)">
+                        <source class="choose-us__image" srcset="./img/tablet/mount-small_tablet.png" media="(max-width: 1200px)">
+                        <img class="choose-us__image" src="./img/desktop/mount-small.png" alt="">
+                    </picture>
                 </div>
             </div>
         </section>
@@ -116,7 +134,12 @@
                 <p class="container__title title">What Our Tourist Say</p>
                 <div class="container__f-box f-box">
                     <div class="f-box__img">
-                        <img src="./img/man-mount.png" alt="">
+                        <picture class="man-mount">
+                            <source class="man-mount" srcset="./img/tablet/man-mount.png" media="(max-width: 1200px)">
+                            <source class="man-mount" srcset="./img/desktop/man-mount.png" media="(max-width: 768px)">
+                            <img class="man-mount" src="./img/desktop/man-mount.png" alt="">
+                        </picture>
+                        
                     </div>
                     <div class="f-box__text-box">
                         <h2 class="f-box__title title">Sam Summon</h2>
