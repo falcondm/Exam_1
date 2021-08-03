@@ -59,6 +59,13 @@ a {
   }
 }
 
+.header .github {
+  color: #fff;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
 .header input.hamburger {
   display: none;
 }
