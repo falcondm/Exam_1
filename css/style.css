@@ -26,7 +26,7 @@ a {
 .header {
   background: url("../img/desktop/mountains.png") no-repeat;
   background-size: cover;
-  height: 820px;
+  height: calc(100vh - 15px);
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -46,7 +46,16 @@ a {
 
 @media screen and (max-width: 1200px) {
   .header {
-    height: calc(100vh - 15px);
+    background: url("../img/tablet/mountains.png") no-repeat;
+    background-size: cover;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .header {
+    background: url("../img/mobile/mountains.png") no-repeat;
+    background-size: cover;
+    background-position-x: 13%;
   }
 }
 
@@ -66,6 +75,18 @@ a {
     position: absolute;
     top: 7px;
     right: 25px;
+  }
+}
+
+.header .menu-label {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .header .menu-label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
@@ -134,6 +155,12 @@ a {
   color: #999;
   font-size: 20px;
   text-align: center;
+}
+
+@media screen and (max-width: 576px) {
+  .header__content .content__form .h-form__text-field {
+    height: 40px;
+  }
 }
 
 .header__content .content__form .h-form__text-field:focus {
@@ -212,6 +239,14 @@ a {
   border: 3px solid #fff;
 }
 
+@media screen and (max-width: 576px) {
+  .header__content .content__form .h-form__button {
+    border: none;
+    height: 40px;
+    margin-top: 10px;
+  }
+}
+
 .header__content .content__form .h-form__button .search-icon {
   margin-left: 15px;
   height: 25px;
@@ -238,19 +273,19 @@ a {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  top: 120px;
+  top: 70%;
   opacity: .8;
   letter-spacing: 2px;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   .header__content .content__scroll {
-    top: 80px;
+    display: none;
   }
 }
 
 .header__content .content__scroll:hover {
-  top: 110px;
+  top: 170px;
 }
 
 .header__content .content__scroll .arrow-icon {
@@ -395,6 +430,16 @@ a {
     height: -moz-fit-content;
     height: fit-content;
     padding: 100px 30px;
+    background: url("../img/tablet/tower.png") no-repeat;
+    background-size: cover;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main .choose-us {
+    background: url("../img/mobile/tower.png") no-repeat;
+    background-size: cover;
+    background-position-x: 10%;
   }
 }
 
@@ -439,6 +484,9 @@ a {
     min-height: fit-content;
     padding: 20px 0;
     top: 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -569,6 +617,13 @@ a {
   background-color: #333333;
   padding: 0 calc(50vw - 555px);
   text-align: center;
+  margin: -1px 0;
+}
+
+@media screen and (max-width: 576px) {
+  .main .icons {
+    height: 380px;
+  }
 }
 
 .main .icons__container {
@@ -583,7 +638,7 @@ a {
           align-items: center;
   max-width: 975px;
   width: 100%;
-  font-size: calc(25px + (36 - 25) * ((100vw - 320px) / (1800 - 320)));
+  font-size: calc(20px + (36 - 20) * ((100vw - 320px) / (1800 - 320)));
   font-family: 'Aleo', serif;
   font-weight: 400;
   position: relative;
@@ -591,6 +646,16 @@ a {
   background-repeat: no-repeat;
   background-position: 48% 15%;
   background-size: 80%;
+}
+
+@media screen and (max-width: 576px) {
+  .main .icons__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-image: none;
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -621,12 +686,18 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (max-width: 576px) {
+  .main .icons__container .container__box {
+    height: 120px;
+    margin-top: 20px;
+  }
 }
 
 .main .icons__container .container__box svg {
@@ -634,11 +705,25 @@ a {
   z-index: 1;
 }
 
+@media screen and (max-width: 576px) {
+  .main .icons__container .container__box:last-child {
+    margin-bottom: 20px;
+  }
+}
+
 .main .spain {
   background: url("../img/desktop/house-pool.png") no-repeat;
   background-size: cover;
   height: 700px;
   padding: 0 calc(50vw - 555px);
+}
+
+@media screen and (max-width: 1200px) {
+  .main .spain {
+    background: url("../img/tablet/house-pool.png") no-repeat;
+    background-size: cover;
+    height: 650px;
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -649,10 +734,13 @@ a {
 
 @media screen and (max-width: 768px) {
   .main .spain {
+    background: url("../img/mobile/house-pool.png") no-repeat;
+    background-size: cover;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
     padding: 50px 0;
+    background-position: center;
   }
 }
 
@@ -769,6 +857,21 @@ a {
   background-size: cover;
 }
 
+@media screen and (max-width: 1200px) {
+  .main .spain-2 {
+    background: url("../img/tablet/mount-ocean.png") no-repeat;
+    background-size: cover;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main .spain-2 {
+    background: url("../img/mobile/mount-ocean.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
 .main .spain-2 .box-2 {
   bottom: 100px;
   right: 0;
@@ -785,6 +888,14 @@ a {
   background-size: cover;
   height: 730px;
   padding: 0 calc(50vw - 570px);
+  margin-top: -1px;
+}
+
+@media screen and (max-width: 1200px) {
+  .main .feedback {
+    background: url("../img/tablet/man-mount-big.png") no-repeat;
+    background-size: cover;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -793,6 +904,8 @@ a {
     height: -moz-fit-content;
     height: fit-content;
     padding: 50px 0;
+    background: url("../img/mobile/man-mount-big.png") no-repeat;
+    background-size: cover;
   }
 }
 
@@ -987,6 +1100,12 @@ a {
   }
 }
 
+@media screen and (max-width: 576px) {
+  .main .feedback .container .f-box__text-box {
+    padding: 25px 10px;
+  }
+}
+
 .main .feedback .container .f-box__text-box .f-box__title {
   font-size: 20px;
   text-transform: uppercase;
@@ -1101,7 +1220,6 @@ a {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     pointer-events: none;
-    padding-top: 125px;
     -webkit-transition: width 475ms ease-out, border-radius .8s .1s ease, -webkit-transform 450ms ease;
     transition: width 475ms ease-out, border-radius .8s .1s ease, -webkit-transform 450ms ease;
     transition: width 475ms ease-out, transform 450ms ease, border-radius .8s .1s ease;
@@ -1488,26 +1606,26 @@ a {
     -webkit-transform: translate(-50%, -50%) rotate(-315deg);
             transform: translate(-50%, -50%) rotate(-315deg);
   }
-  input.hamburger:checked ~ label close {
+  input.hamburger:checked ~ .menu-label > .close {
     color: #333;
     width: 100%;
   }
-  input.hamburger:checked ~ label open {
+  input.hamburger:checked ~ .menu-label > .open {
     color: #ffffff00;
     width: 0;
   }
-  label.hamburger {
-    z-index: 9999;
-    position: relative;
-    display: block;
+  .menu-label {
+    position: absolute;
+    right: 25px;
+    top: 10px;
     width: 50px;
-    height: 50px;
+    height: 20px;
+    z-index: 3;
   }
-  label.hamburger:hover {
-    cursor: pointer;
-  }
-  label.hamburger text close,
-  label.hamburger text open {
+  .menu-label .close,
+  .menu-label .open {
+    width: 50px;
+    height: 20px;
     text-transform: uppercase;
     font-size: .8em;
     text-align: center;
@@ -1519,14 +1637,24 @@ a {
     -webkit-transition: width .25s .35s, color .45s .35s;
     transition: width .25s .35s, color .45s .35s;
   }
-  label.hamburger text close {
+  .menu-label .close {
     color: #00000000;
     right: 0;
     width: 0;
   }
-  label.hamburger text open {
+  .menu-label .open {
     color: #fff;
     width: 100%;
+  }
+  label.hamburger {
+    z-index: 9999;
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+  }
+  label.hamburger:hover {
+    cursor: pointer;
   }
   label.hamburger > i {
     position: absolute;
