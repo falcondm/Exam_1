@@ -234,6 +234,7 @@ a {
             @media screen and (max-width: 768px) {
                 max-width: 300px;
                 width: 100%;
+                z-index: 2;
             }
             .nav__menu {
                 display: flex;
@@ -487,6 +488,8 @@ a {
             background-size: 80%;
             @media screen and (max-width: 576px) {
                 flex-direction: column;
+            }
+            @media screen and (max-width: 768px) {
                 background-image: none;
             }
             @media screen and (max-width: 992px) {
@@ -495,11 +498,6 @@ a {
             }
             @media screen and (max-width: 1200px) {
                 padding: 0 20px;
-            }
-            img {
-                position: absolute;
-                top: 40px;
-                left: 84px;
             }
             .container__box {
                 height: 120px;
@@ -511,7 +509,7 @@ a {
                     height: 120px;
                     margin-top: 20px;
                 }
-                svg {
+                img {
                     background: #333;
                     z-index: 1;
                 }
@@ -523,7 +521,7 @@ a {
                 &:hover {
                     transform: scale(1.2);
                     cursor: default;
-                    svg {
+                    img {
                         transition: .5s;
                         transform:rotate3d(1,0,0,360deg);
                     }
@@ -821,15 +819,17 @@ a {
             height: 21px;
             a {
                 height: 17px;
+                width: 25px;
             }
-            svg {
+            img {
                 height: 17px;
                 width: 25px;
                 fill: #fff;
                 transform: scale(1.1);
+                filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(350deg) brightness(108%) contrast(102%);
                 &:hover {
                     transform: scale(1.4);
-                    fill: #5474fd;
+                    filter: invert(39%) sepia(49%) saturate(3109%) hue-rotate(217deg) brightness(103%) contrast(98%);
                 }
             }
         }
