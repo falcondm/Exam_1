@@ -902,7 +902,6 @@ a {
                 border-bottom-left-radius: 0;
                 .menu__item {
                         transform: translatex(0);
-                        @include transition;
                     .menu__link {
                         padding-right: 15px;
                     }
