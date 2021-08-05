@@ -513,6 +513,8 @@ a {
                 img {
                     background: #333;
                     z-index: 1;
+                    width: 60px;
+                    height: 60px;
                 }
                 &:last-child {
                     @media screen and (max-width: 576px) {
