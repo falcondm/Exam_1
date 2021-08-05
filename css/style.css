@@ -327,12 +327,16 @@ a {
 }
 
 .header__content .content__scroll:hover {
-  top: 52%;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   .header__content .content__scroll:hover {
-    top: 110px;
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
   }
 }
 
@@ -509,8 +513,8 @@ a {
   position: absolute;
   z-index: -1;
   display: block;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
   left: -20%;
   right: -20%;
   top: 0;
@@ -522,8 +526,8 @@ a {
 .main .button:hover::after {
   -webkit-transform: skewX(-45deg) scale(1, 1);
           transform: skewX(-45deg) scale(1, 1);
-  -webkit-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 .main .button:hover {
@@ -730,7 +734,7 @@ a {
   z-index: 1;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 768px) {
   .main .choose-us__imgs .imgs__river:hover,
   .main .choose-us__imgs .imgs__mount:hover {
     -webkit-transform: none;

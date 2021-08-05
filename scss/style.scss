@@ -187,9 +187,10 @@ a {
                 top: 120px;
             }
             &:hover {
-                top: 52%;
+                transform: translateY(-5px);
+                transition: .5s;
                 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-                    top: 110px;
+                    transform: translateY(-5px);
                 }
             }
             .arrow-icon {
@@ -319,7 +320,7 @@ a {
             position: absolute;
             z-index: -1;
             display: block;
-            transition: all 0.3s ease;
+            transition: all 0.5s ease;
             left: -20%;
             right: -20%;
             top: 0;
@@ -328,7 +329,7 @@ a {
         }
         &:hover::after {
             transform: skewX(-45deg) scale(1, 1);
-            transition: all 0.3s ease-out;
+            transition: all 0.5s ease-out;
         }
         &:hover {
             border: none;
@@ -444,7 +445,7 @@ a {
                     z-index: 1;
                 }
             }
-            @media screen and (max-width: 1200px) {
+            @media screen and (max-width: 768px) {
                 .imgs__river:hover,
                 .imgs__mount:hover {
                     transform: none;
