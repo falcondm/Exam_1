@@ -460,7 +460,7 @@ a {
   opacity: 1;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  top: 22px;
+  top: 18px;
 }
 
 .header__panel .panel__nav .nav__menu .menu__link:hover::after {
